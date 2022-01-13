@@ -1,5 +1,5 @@
 {
-  "name": "firebolt-discovery-sdk",
+  "name": "@firebolt-js/discovery-sdk",
   "version": "0.1.0-alpha.1",
   "description": "Firebolt Search &amp; Discovery SDK",
   "main": "index.js",
