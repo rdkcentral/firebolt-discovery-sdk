@@ -61,7 +61,7 @@
           "name": "parameters",
           "summary": "Any parameters to control what purchases are returned",
           "schema": {
-            "$ref": "https://meta.comcast.com/firebolt/discovery#/definitions/PurchasedContentParameters"
+            "$ref": "#/components/schemas/PurchasedContentParameters"
           },
           "required": true
         },
@@ -91,7 +91,9 @@
             },
             {
               "name": "parameters",
-              "value": {}
+              "value": {
+                "limit": 10
+              }
             },
             {
               "name": "options",
@@ -151,7 +153,7 @@
           "name": "parameters",
           "summary": "The content parameters",
           "schema": {
-            "$ref": "https://meta.comcast.com/firebolt/entertainment#/definitions/EntityInfoParameters"
+            "$ref": "#/components/schemas/EntityInfoParameters"
           },
           "required": true
         },
@@ -483,6 +485,52 @@
           "data"
         ],
         "additionalProperties": false
+      },
+      "EntityInfoParameters": {
+        "title": "EntityInfoParameters",
+        "type": "object",
+        "properties": {
+          "entityId": {
+            "type": "string"
+          },
+          "assetId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "entityId"
+        ],
+        "additionalProperties": false,
+        "examples": [
+          {
+            "entityId": "345"
+          }
+        ]
+      },
+      "PurchasedContentParameters": {
+        "title": "PurchasedContentParameters",
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "minimum": -1
+          },
+          "offeringType": {
+            "$ref": "https://meta.comcast.com/firebolt/entertainment#/definitions/OfferingType"
+          },
+          "programType": {
+            "$ref": "https://meta.comcast.com/firebolt/entertainment#/definitions/ProgramType"
+          }
+        },
+        "required": [
+          "limit"
+        ],
+        "additionalProperties": false,
+        "examples": [
+          {
+            "limit": 100
+          }
+        ]
       }
     }
   }
