@@ -54,13 +54,15 @@
                       "width": 256,
                       "height": 256,
                       "locale": "en",
-                      "format": "png"
+                      "format": "png",
+                      "uri": "https://app-1.com/images/icons/en/256x256.png"
                     },
                     {
                       "width": 256,
                       "height": 256,
                       "locale": "default",
-                      "format": "png"
+                      "format": "png",
+                      "uri": "https://app-1.com/images/icons/default/256x256.png"
                     }
                   ]
                 },
@@ -74,16 +76,18 @@
                   "title": "Application 2",
                   "icons": [
                     {
-                      "width": 1020,
-                      "height": 1020,
+                      "width": 1080,
+                      "height": 1080,
                       "locale": "es",
-                      "format": "png"
+                      "format": "png",
+                      "uri": "https://app-2.com/images/icons/es/1080x1080.png"
                     },
                     {
-                      "width": 1020,
-                      "height": 1020,
+                      "width": 1080,
+                      "height": 1080,
                       "locale": "default",
-                      "format": "png"
+                      "format": "png",
+                      "uri": "https://app-2.com/images/icons/default/1080x1080.png"
                     }
                   ]
                 }
@@ -119,13 +123,15 @@
                       "width": 256,
                       "height": 256,
                       "locale": "en",
-                      "format": "png"
+                      "format": "png",
+                      "uri": "https://app-1.com/images/icons/en/256x256.png"
                     },
                     {
                       "width": 256,
                       "height": 256,
                       "locale": "default",
-                      "format": "png"
+                      "format": "png",
+                      "uri": "https://app-1.com/images/icons/default/256x256.png"
                     }
                   ]
                 }
@@ -204,7 +210,22 @@
                 "cloud": true,
                 "location": "https://app-1.com",
                 "title": "Application 1",
-                "iconUrl": "https://app-1.com/icon.png"
+                "icons": [
+                  {
+                    "width": 256,
+                    "height": 256,
+                    "locale": "en",
+                    "format": "png",
+                    "uri": "https://app-1.com/images/icons/en/256x256.png"
+                  },
+                  {
+                    "width": 256,
+                    "height": 256,
+                    "locale": "default",
+                    "format": "png",
+                    "uri": "https://app-1.com/images/icons/default/256x256.png"
+                  }
+                ]
               }
             }
           }
