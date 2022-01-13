@@ -200,33 +200,29 @@
           "result": {
             "name": "Default Result",
             "value": {
-              "found": true,
-              "onDevice": true,
-              "entry": {
-                "appKey": "app-1",
-                "appSoftwareVersion": "1.0",
-                "added": "2021-04-23T18:25:43.511Z",
-                "updated": "2021-04-23T18:25:43.511Z",
-                "cloud": true,
-                "location": "https://app-1.com",
-                "title": "Application 1",
-                "icons": [
-                  {
-                    "width": 256,
-                    "height": 256,
-                    "locale": "en",
-                    "format": "png",
-                    "uri": "https://app-1.com/images/icons/en/256x256.png"
-                  },
-                  {
-                    "width": 256,
-                    "height": 256,
-                    "locale": "default",
-                    "format": "png",
-                    "uri": "https://app-1.com/images/icons/default/256x256.png"
-                  }
-                ]
-              }
+              "appKey": "app-1",
+              "appSoftwareVersion": "1.0",
+              "added": "2021-04-23T18:25:43.511Z",
+              "updated": "2021-04-23T18:25:43.511Z",
+              "cloud": true,
+              "location": "https://app-1.com",
+              "title": "Application 1",
+              "icons": [
+                {
+                  "width": 256,
+                  "height": 256,
+                  "locale": "en",
+                  "format": "png",
+                  "uri": "https://app-1.com/images/icons/en/256x256.png"
+                },
+                {
+                  "width": 256,
+                  "height": 256,
+                  "locale": "default",
+                  "format": "png",
+                  "uri": "https://app-1.com/images/icons/default/256x256.png"
+                }
+              ]
             }
           }
         }
@@ -273,7 +269,8 @@
           "nextPageToken": {
             "type": "string"
           }
-        }
+        },
+        "required": [ "apps" ]
       },
       "AppCatalogItem": {
         "title": "AppCatalogItem",
@@ -315,7 +312,10 @@
               "$ref": "#/components/schemas/Icon"
             }
           }
-        }
+        },
+        "required": [
+          "appKey"
+        ]
       },
       "Icon": {
         "title": "Icon",
@@ -337,7 +337,8 @@
           "uri": {
             "type": "string"
           }
-        }
+        },
+        "required": [ "width", "height", "locale", "format" ]
       }
     }
   }
