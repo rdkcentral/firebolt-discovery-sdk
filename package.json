@@ -2,7 +2,7 @@
   "name": "@firebolt-js/discovery-sdk",
   "version": "0.1.0-alpha.1",
   "description": "Firebolt Search &amp; Discovery SDK",
-  "main": "index.js",
+  "main": "./dist/firebolt-discovery.js",
   "scripts": {
     "prepare": "npm run prepare:setup && npm run dist:docs && npm run dist:sdk && npm run dist:d",
     "prepare:setup": "mkdir -p ./dist/docs ./build/docs/markdown ./build/sdk/javascript/src",
