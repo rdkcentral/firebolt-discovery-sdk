@@ -42,7 +42,7 @@
               "nextPageToken": "abc",
               "apps": [
                 {
-                  "appKey": "app-1",
+                  "appId": "app-1",
                   "appSoftwareVersion": "1.0",
                   "added": "2021-04-23T18:25:43.511Z",
                   "updated": "2021-04-23T18:25:43.511Z",
@@ -67,7 +67,7 @@
                   ]
                 },
                 {
-                  "appKey": "app-2",
+                  "appId": "app-2",
                   "appSoftwareVersion": "1.0",
                   "added": "2021-04-23T18:25:43.511Z",
                   "updated": "2021-04-23T18:25:43.511Z",
@@ -111,7 +111,7 @@
               "nextPageToken": "def",
               "apps": [
                 {
-                  "appKey": "app-2",
+                  "appId": "app-2",
                   "appSoftwareVersion": "1.0",
                   "added": "2021-04-23T18:25:43.511Z",
                   "updated": "2021-04-23T18:25:43.511Z",
@@ -200,7 +200,7 @@
           "result": {
             "name": "Default Result",
             "value": {
-              "appKey": "app-1",
+              "appId": "app-1",
               "appSoftwareVersion": "1.0",
               "added": "2021-04-23T18:25:43.511Z",
               "updated": "2021-04-23T18:25:43.511Z",
@@ -277,7 +277,7 @@
         "type": "object",
         "description": "Object representing a single app in a catalog",
         "properties": {
-          "appKey": {
+          "appId": {
             "type": "string"
           },
           "appSoftwareVersion": {
@@ -314,7 +314,7 @@
           }
         },
         "required": [
-          "appKey"
+          "appId"
         ]
       },
       "Icon": {
