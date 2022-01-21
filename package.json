@@ -12,7 +12,7 @@
     "build:docs": "firebolt-openrpc --task docs --source ./src/ --template ./src/template/markdown --output ./build/docs/markdown --as-path",
     "build:wiki": "firebolt-openrpc -task docs --source ./src/ --template ./src/template/markdown --output ./build/docs/markdown",
     "dist:sdk": "npm run validate && npm run build:sdk && npm run pack && npm run test",
-    "dist:d": "npm run validate && firebolt-openrpc --task declarations --source ./src/ --output ./dist/firebolt.d.ts",
+    "dist:d": "npm run validate && firebolt-openrpc --task declarations --source ./src/ --output ./dist/firebolt-discovery.d.ts",
     "dist:docs": "npm run validate && npm run build:docs asPath && rm -r ./dist/docs && cp -R ./build/docs/markdown ./dist/docs",
     "dist:wiki": "npm run validate && npm run build:wiki && rm -r ./dist/docs && cp -R ./build/docs/markdown ./dist/docs",
     "test": "jest --config=jest.config.js --detectOpenHandles",
