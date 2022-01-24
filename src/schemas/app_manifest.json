@@ -13,6 +13,17 @@
       "description": "A manifest object that provides all configuration for an application to run on FireboltOS",
       "type": "object",
       "required": [
+        "schemaVersion",
+        "appId",
+        "name",
+        "shortName",
+        "origin",
+        "minFireboltInterfaceVersion",
+        "appSoftwareVersion",
+        "loadMode",
+        "types",
+        "usedPlatformCapabilities",
+        "grantedPlatformCapabilities"
       ],
       "properties": {
         "schemaVersion": {
@@ -145,6 +156,38 @@
         "preferredDimensions": {
           "$ref": "#/definitions/Dimension",
           "description": "The static dimensions that the app was coded to. FireboltOS will scale the app to fit the screen. If this value is not given, the app is assumed to dynamically adjust itself to any dimension."
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "https://meta.comcast.com/firebolt/image#/definitions/Image"
+          },
+          "description": "The images associated with this app"
+        },
+        "allowedDeviceSkus": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "If specified, the app may only execute the defined device skus"
+        },
+        "excludedDeviceSkus": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "If specified, the app may not only execute on the defined device skus"
+        },
+        "usedPlatformCapabilities": {
+          "$ref": "#/definitions/PlatformCapabilities",
+          "description": "The capabilities that the app uses from the platform"
+        },
+        "grantedPlatformCapabilities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The capabilities granted by the distributor"
         }
       }
     },
@@ -233,6 +276,29 @@
         },
         "height": {
           "type": "number"
+        }
+      },
+      "required": [
+        "width",
+        "height"
+      ]
+    },
+    "PlatformCapabilities": {
+      "title": "PlatformCapabilities",
+      "description": "Separates capabilities into musts and shoulds",
+      "type": "object",
+      "properties": {
+        "must": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "should": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       },
       "required": [
