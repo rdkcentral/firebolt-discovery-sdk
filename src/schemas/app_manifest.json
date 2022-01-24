@@ -131,7 +131,7 @@
         },
         "distributorDefault": {
           "type": "boolean",
-          "description": "Whether this is the default app for this distributor.  The OS must not launch multiple default apps.  Further the S&D API should not allow discovery multiple defaults of the same type."
+          "description": "Whether this is the default app of the particular type for this partner.  The OS must not launch multiple defaults for a particular type.  Further the S&D API should not allow discovery multiple defaults of the same type."
         },
         "endUserDiscoverable": {
           "type": "boolean",
@@ -193,7 +193,7 @@
     },
     "LegacyLoadConfig": {
       "title": "LegacyLoadConfig",
-      "description": "A manifest object that provides all configuration for an application to run on FireboltOS",
+      "description": "Configuration to run a legacy application on FireboltOS",
       "type": "object",
       "properties": {
         "mode": {
