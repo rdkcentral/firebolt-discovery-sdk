@@ -35,11 +35,11 @@
           "description": "The id for the app"
         },
         "name": {
-          "$ref": "#/definitions/LocalizedString",
+          "$ref": "https://meta.comcast.com/firebolt/primitives#/definitions/LocalizedString",
           "description": "The full display name of the app"
         },
         "shortName": {
-          "$ref": "#/definitions/LocalizedString",
+          "$ref": "https://meta.comcast.com/firebolt/primitives#/definitions/LocalizedString",
           "description": "The short display name of the app"
         },
         "origin": {
@@ -154,7 +154,7 @@
           "description": "If the app fails to launch for a supported reason, launch the specified app with the specified intent instead"
         },
         "preferredDimensions": {
-          "$ref": "#/definitions/Dimension",
+          "$ref": "https://meta.comcast.com/firebolt/primitives#/definitions/Dimension",
           "description": "The static dimensions that the app was coded to. FireboltOS will scale the app to fit the screen. If this value is not given, the app is assumed to dynamically adjust itself to any dimension."
         },
         "images": {
@@ -266,23 +266,6 @@
         "contactEmail"
       ]
     },
-    "Dimension": {
-      "title": "Dimension",
-      "description": "Object specifying a width and height",
-      "type": "object",
-      "properties": {
-        "width": {
-          "type": "number"
-        },
-        "height": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "width",
-        "height"
-      ]
-    },
     "PlatformCapabilities": {
       "title": "PlatformCapabilities",
       "description": "Separates capabilities into musts and shoulds",
@@ -305,12 +288,6 @@
         "width",
         "height"
       ]
-    },
-    "LocalizedString": {
-      "title": "LocalizedString",
-      "additionalProperties": {
-        "type": "string"
-      }
     }
   }
 }
