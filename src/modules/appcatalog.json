@@ -309,36 +309,13 @@
           "icons": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Icon"
+              "$ref": "https://meta.comcast.com/firebolt/image#/definitions/Image"
             }
           }
         },
         "required": [
           "appId"
         ]
-      },
-      "Icon": {
-        "title": "Icon",
-        "type": "object",
-        "description": "Icon image metadata",
-        "properties": {
-          "width": {
-            "type": "number"
-          },
-          "height": {
-            "type": "number"
-          },
-          "locale": {
-            "type": "string"
-          },
-          "format": {
-            "type": "string"
-          },
-          "uri": {
-            "type": "string"
-          }
-        },
-        "required": [ "width", "height", "locale", "format" ]
       }
     }
   }

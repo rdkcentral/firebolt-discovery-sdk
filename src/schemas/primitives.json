@@ -1,0 +1,38 @@
+{
+  "$schema": "https://meta.comcast.com/firebolt/primitives",
+  "$id": "https://meta.comcast.com/firebolt/primitives",
+  "title": "Primitives",
+  "anyOf": [
+    {
+      "$ref": "#/definitions/LocalizedString"
+    },
+    {
+      "$ref": "#/definitions/Dimension"
+    }
+  ],
+  "definitions": {
+    "LocalizedString": {
+      "title": "LocalizedString",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "Dimension": {
+      "title": "Dimension",
+      "description": "Object specifying a width and height",
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "width",
+        "height"
+      ]
+    }
+  }
+}

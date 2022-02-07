@@ -1,0 +1,35 @@
+{
+  "$schema": "https://meta.comcast.com/firebolt/image",
+  "$id": "https://meta.comcast.com/firebolt/image",
+  "title": "Image",
+  "anyOf": [
+    {
+      "$ref": "#/definitions/Image"
+    }
+  ],
+  "definitions": {
+    "Image": {
+      "title": "Image",
+      "type": "object",
+      "description": "Image metadata",
+      "properties": {
+        "width": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "format": {
+          "type": "string"
+        },
+        "uri": {
+          "type": "string"
+        }
+      },
+      "required": [ "width", "height", "locale", "format" ]
+    }
+  }
+}
