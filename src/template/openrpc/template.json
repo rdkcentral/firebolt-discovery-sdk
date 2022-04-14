@@ -1,0 +1,23 @@
+{
+    "openrpc": "1.2.4",
+    "info": {
+        "title": "Firebolt S&D SDK",
+        "version": "0.0.0"
+    },
+    "methods": [
+        {
+            "name": "rpc.discover",
+            "summary": "Firebolt S&D OpenRPC schema",
+            "params": [],
+            "result": {
+                "name": "OpenRPC Schema",
+                "schema": {
+                    "type": "object"
+                }
+            }
+        }
+    ],
+    "components": {
+        "schemas": {}
+    }
+}
