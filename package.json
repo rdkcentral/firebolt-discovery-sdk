@@ -4,6 +4,7 @@
   "description": "Firebolt Search &amp; Discovery SDK",
   "main": "./dist/lib/firebolt-discovery.mjs",
   "types": "./dist/lib/firebolt-discovery.d.ts",
+  "type": "module",
   "scripts": {
     "prepare": "npm run prepare:setup && npm run dist:docs && npm run dist:sdk && npm run dist:d",
     "prepare:setup": "npm run clean && npx mkdirp ./dist/docs ./dist/lib ./build/docs/markdown ./build/sdk/javascript/src",
