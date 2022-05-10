@@ -8,7 +8,7 @@
     "prepare": "npm run prepare:setup && npm run dist:docs && npm run dist:sdk && npm run dist:d",
     "prepare:setup": "npm run clean && npx mkdirp ./dist/docs ./dist/lib ./build/docs/markdown ./build/sdk/javascript/src",
     "validate": "npm run build:openrpc && firebolt-openrpc --task validate --source ./src --shared-schemas node_modules/@firebolt-js/schemas/src/schemas/",
-    "build:openrpc": "firebolt-openrpc --task openrpc --source ./src --template ./src/template/openrpc/template.json --output ./dist/firebolt-open-rpc.json --shared-schemas node_modules/@firebolt-js/schemas/src/schemas/",
+    "build:openrpc": "firebolt-openrpc --task openrpc --source ./src --template ./src/template/openrpc/template.json --output ./dist/firebolt-discovery-open-rpc.json --shared-schemas node_modules/@firebolt-js/schemas/src/schemas/",
     "build:sdk": "firebolt-openrpc --task sdk --source ./src/ --template ./src/template/js --output ./build/sdk/javascript/src --shared-schemas node_modules/@firebolt-js/schemas/src/schemas/",
     "build:docs": "firebolt-openrpc --task docs --source ./src/ --template ./src/template/markdown --output ./build/docs/markdown --shared-schemas node_modules/@firebolt-js/schemas/src/schemas/ --as-path",
     "build:wiki": "firebolt-openrpc -task docs --source ./src/ --template ./src/template/markdown --output ./build/docs/markdown --shared-schemas node_modules/@firebolt-js/schemas/src/schemas/",
