@@ -16,7 +16,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
+/** 
  * This module sets up the mock transport layer immediately, instead of letting the SDK wait 500ms
  */
 
