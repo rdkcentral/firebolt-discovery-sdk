@@ -4,5 +4,7 @@
   "testPathIgnorePatterns": ["<rootDir>/build/", "<rootDir>/node_modules/"],
   "moduleFileExtensions": ["js", "jsx", "mjs"],
   "verbose": true,
-  "testEnvironment": "jest-environment-jsdom"
+  "setupFiles": [
+    "./node_modules/@firebolt-js/openrpc/test/Browser.js"
+  ]
 }
